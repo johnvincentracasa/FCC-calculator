@@ -1,39 +1,90 @@
-body {
-  font-family: "Roboto", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+:root {
+  --light_grey: #a5a5a5;
+  --light_orange: #f09514;
+  --dark_grey: #333333;
 }
 
-.calculator {
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #c2c2d6;
   height: 100vh;
-  width: 100%;
-  padding: 0.5rem;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+#root {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.container {
+  border: 2px solid rgb(71, 71, 107);
+  width: 16rem;
+  height: 22rem;
+  background: black;
+  padding: 0.2rem 0.5rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
 .display {
   width: 100%;
-  padding: 0.5rem;
-  padding-bottom: 0;
+  margin: 0rem 0.5rem;
   color: white;
   font-size: 2.5rem;
   text-align: end;
 }
-.container {
-  width: 16rem;
-  height: 23rem;
-  background: black;
-  padding: 0.2rem 0.5rem;
-  padding-bottom: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .btn {
+  position: relative;
   width: 3.3rem;
+  font-weight: 300;
   height: 3.3rem;
   border-radius: 50%;
   border: none;
   margin: 0.35rem;
   font-size: 2rem;
+  background-color: var(--dark_grey);
+  color: white;
+  cursor: pointer;
+}
+
+.btn_large {
+  width: 7.3rem;
+  border-radius: 1.65rem;
+}
+.btn_equal {
+  position: absolute;
+  height: 7.3rem;
+  border-radius: 1.65rem;
+  bottom: 8px;
+  right: 8px;
+}
+.btn:active {
+  background-color: white;
+  color: var(--dark_grey);
+}
+
+.light_grey {
+  background-color: var(--light_grey);
+}
+
+.light_grey:active {
+  color: var(--light_grey);
+}
+
+.light_orange {
+  background-color: var(--light_orange);
+}
+
+.light_orange:active {
+  color: var(--light_orange);
 }
